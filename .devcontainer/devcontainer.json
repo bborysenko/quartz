@@ -1,0 +1,9 @@
+{
+	"name": "Node.js",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+	"features": {},
+	"forwardPorts": [
+		8080
+	],
+	"postCreateCommand": "npm install"
+}

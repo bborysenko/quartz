@@ -70,7 +70,6 @@ const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
                 {content && <p>{content}</p>}
                 <div class="page-listing">
                   <p>
-                    {i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}
                     {pages.length > numPages && (
                       <>
                         {" "}
@@ -99,7 +98,6 @@ const TagContent: QuartzComponent = (props: QuartzComponentProps) => {
       <div class={classes}>
         <article>{content}</article>
         <div class="page-listing">
-          <p>{i18n(cfg.locale).pages.tagContent.itemsUnderTag({ count: pages.length })}</p>
           <div>
             <PageList {...listProps} />
           </div>

@@ -1,24 +1,32 @@
-.recent-notes {
-  & > h3 {
-    margin: 0.5rem 0 0 0;
-    font-size: 1rem;
-  }
+@use "../../styles/variables.scss" as *;
 
-  & > ul.recent-ul {
-    list-style: none;
-    margin-top: 1rem;
-    padding-left: 0;
+ul.recent-ul {
+  list-style: none;
+  margin-top: 2em;
+  padding-left: 0;
+}
 
-    & > li {
-      margin: 1rem 0;
-      .section > .desc > h3 > a {
-        background-color: transparent;
+li.recent-li {
+  margin-bottom: 1em;
+
+  & > .section {
+    display: grid;
+    grid-template-columns: 6em 3fr 1fr;
+
+    @media all and (max-width: $mobileBreakpoint) {
+      & > .tags {
+        display: none;
       }
+    }
 
-      .section > .meta {
-        margin: 0 0 0.5rem 0;
-        opacity: 0.6;
-      }
+    & > .desc > h3 > a {
+      background-color: transparent;
+    }
+
+    & > .meta {
+      margin: 0;
+      flex-basis: 6em;
+      opacity: 0.6;
     }
   }
 }

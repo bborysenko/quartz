@@ -27,6 +27,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ContentMeta(),
     Component.TagList(),
   ],
+  afterBody: [
+    Component.RecentNotes({
+      limit: 5,
+      filter: (f) =>
+        f.slug!.toLowerCase().startsWith("notes/") && f.slug!.toLowerCase() !== "notes/index",
+      linkToMore: "Notes/" as SimpleSlug,
+    }),
+  ],
   left: [],
   right: [],
 }
@@ -37,6 +45,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta()
   ],
+  afterBody: [],
   left: [],
   right: [],
 }

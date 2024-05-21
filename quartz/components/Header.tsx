@@ -13,9 +13,13 @@ header {
   gap: 1.5rem;
 }
 
-header h1 {
+header .page-title {
   margin: 0;
   flex: auto;
+  font-size: 1.75rem;
+  font-family: var(--headerFont);
+  color: var(--dark);
+  font-weight: revert;
 }
 `
 
